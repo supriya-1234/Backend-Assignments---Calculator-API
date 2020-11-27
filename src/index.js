@@ -84,7 +84,6 @@ app.post("/sub", (req, res) => {
       message: "the difference of given two numbers",
       difference: parseFloat(num1) - parseFloat(num2)
     });
-    return;
   }
 
   if (isNaN(parseFloat(num1)) || isNaN(parseFloat(num2))) {
