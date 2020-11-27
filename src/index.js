@@ -79,16 +79,14 @@ app.post("/sub", (req, res) => {
     return;
   }
   if (!isNaN(parseFloat(num1)) && !isNaN(parseFloat(num2))) {
-    let difference = parseFloat(num1) - parseFloat(num2);
-    if (difference < 1000000) {
-      res.send({
-        status: "success",
-        message: "the difference of given two numbers",
-        difference: difference
-      });
-      return;
-    }
+    res.send({
+      status: "success",
+      message: "the difference of given two numbers",
+      difference: parseFloat(num1) - parseFloat(num2)
+    });
+    return;
   }
+
   if (isNaN(parseFloat(num1)) || isNaN(parseFloat(num2))) {
     res.send({
       status: "failure",
