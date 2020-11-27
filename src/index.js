@@ -88,7 +88,8 @@ app.post("/sub", (req, res) => {
       });
       return;
     }
-  } else if (isNaN(parseFloat(num1)) || isNaN(parseFloat(num2))) {
+  }
+  if (isNaN(parseFloat(num1)) || isNaN(parseFloat(num2))) {
     res.send({
       status: "failure",
       message: "Invalid data types",
@@ -134,7 +135,8 @@ app.post("/multiply", (req, res) => {
       });
       return;
     }
-  } else if (isNaN(parseFloat(num1)) || isNaN(parseFloat(num2))) {
+  }
+  if (isNaN(parseFloat(num1)) || isNaN(parseFloat(num2))) {
     res.send({
       status: "failure",
       message: "Invalid data types",
