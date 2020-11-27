@@ -123,7 +123,7 @@ app.post("/multiply", (req, res) => {
     if (result < 1000000) {
       res.send({
         status: "success",
-        message: "the sum of given two numbers",
+        message: "The product of given numbers",
         result: result
       });
       return;
